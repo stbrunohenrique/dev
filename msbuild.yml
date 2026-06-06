@@ -35,7 +35,8 @@ jobs:
         arch: amd64
 
     - name: Clone external repo
-      run: git clone https://github.com/kfh83/StobjectEx.git external-repo
+      run: |
+        git clone https://github.com/kfh83/StobjectEx.git external-repo
     - name: Compile StobjectEx (stobject.dll)
       run: | 
         msbuild StobjectEx.sln /p:Configuration=Release /p:Platform=x64
